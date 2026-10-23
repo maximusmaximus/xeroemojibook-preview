@@ -1,0 +1,14 @@
+name = "xeroemojibook"
+main = "src/worker.js"
+compatibility_date = "2026-05-01"
+routes = [{ pattern = "xeroemojibook.grok.me", custom_domain = true }]
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = ["/api/*"]
+[vars]
+PUBLIC_BASE_URL = "https://xeroemojibook.grok.me"
+RPI_BASE_URL = "https://open.api.rpiprint.com"
+RPI_LIVE_ORDERS = "false"   # MUST stay false until Max approves live fulfillment
+CHECKOUT_ENABLED = "false"  # coming soon: no price and no hosted RPI print files yet
+# Secrets (wrangler secret put): STRIPE_SECRET_KEY (sk_test_...), STRIPE_WEBHOOK_SECRET, RPI_API_AUTH

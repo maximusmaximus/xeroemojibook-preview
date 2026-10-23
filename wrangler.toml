@@ -1,0 +1,4 @@
+name = "xeroemojibook"
+compatibility_date = "2026-05-01"
+[assets]
+directory = "./public"
